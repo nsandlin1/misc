@@ -1,4 +1,4 @@
-// Nick Landry, Novi Sandlin
+// Novi Sandlin
 // 11-12-2022
 // Techshell final proj CSC222
 
