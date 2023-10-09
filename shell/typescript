@@ -1,0 +1,99 @@
+Script started on 2022-11-13 16:29:24-06:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="80" LINES="24"]
+]0;nickl@nickl-VirtualBox: ~[01;32mnickl@nickl-VirtualBox[00m:[01;34m~[00m$ ./a.out
+/home/nickl$ cd Desktop
+/home/nickl/Desktop$ pwd
+/home/nickl/Desktop
+/home/nickl/Desktop$ cd ..
+/home/nickl$ ls -lh techshell.c
+t.tokens[0] = ls
+t.tokens[1] = -lh
+t.tokens[2] = techshell.c
+-rwxrwxr-x 1 nickl nickl 6.5K Nov 13 16:15 techshell.c
+/home/nickl$ chmod 400 techshell.c
+t.tokens[0] = chmod
+t.tokens[1] = 400
+t.tokens[2] = techshell.c
+/home/nickl$ ls -lh techshell.c
+t.tokens[0] = ls
+t.tokens[1] = -lh
+t.tokens[2] = techshell.c
+-r-------- 1 nickl nickl 6.5K Nov 13 16:15 techshell.c
+/home/nickl$ ls /root
+t.tokens[0] = ls
+t.tokens[1] = /root
+ls: cannot open directory '/root': Permission denied
+/home/nickl$ horseface
+t.tokens[0] = horseface
+No such file or directory
+/home/nickl$ cd /root
+Permission denied
+/home/nickl$ ps
+t.tokens[0] = ps
+    PID TTY          TIME CMD
+   5146 pts/7    00:00:00 bash
+   5154 pts/7    00:00:00 a.out
+   5184 pts/7    00:00:00 ps
+]0;nickl@nickl-VirtualBox: ~[01;32mnickl@nickl-VirtualBox[00m:[01;34m~[00m$ ./a.out
+/home/nickl$ whereis ps
+t.tokens[0] = whereis
+t.tokens[1] = ps
+ps: /usr/bin/ps /usr/share/man/man1/ps.1.gz
+/home/nickl$ /bin/ps u
+t.tokens[0] = /bin/ps
+t.tokens[1] = u
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+nickl       1305  0.0  0.1 164020  2140 tty2     Ssl+ 15:40   0:00 /usr/lib/gdm3
+nickl       1308  4.0  7.3 405744 148932 tty2    Rl+  15:40   2:03 /usr/lib/xorg
+nickl       1347  0.0  0.1 188220  3416 tty2     Sl+  15:40   0:00 /usr/libexec/
+nickl       2568  0.0  0.0  10880  1796 pts/0    Ss   15:42   0:00 bash
+nickl       3279  0.0  0.0  10748   984 pts/1    Ss   15:56   0:00 bash
+nickl       3361  0.0  0.0   8212   940 pts/1    S+   15:57   0:00 script
+nickl       3362  0.0  0.0  10748  1916 pts/2    Ss   15:57   0:00 bash -i
+nickl       4191  0.0  0.2  24640  5548 pts/0    S+   16:09   0:00 vim techshell
+nickl       4256  0.0  0.0   8212  1552 pts/2    S+   16:11   0:00 script
+nickl       4257  0.0  0.1  10748  3604 pts/3    Ss   16:11   0:00 bash -i
+nickl       4309  0.0  0.0   8212  1492 pts/3    S+   16:12   0:00 script
+nickl       4310  0.0  0.2  10880  4424 pts/4    Ss   16:12   0:00 bash -i
+nickl       4391  0.0  0.1  10748  3680 pts/6    Ss+  16:14   0:00 bash
+nickl       5042  0.0  0.1   8212  2220 pts/4    S+   16:26   0:00 script
+nickl       5043  0.0  0.2  10748  4908 pts/5    Ss   16:26   0:00 bash -i
+nickl       5145  0.0  0.1   8212  2196 pts/5    R+   16:29   0:00 script
+nickl       5146  0.0  0.2  10748  4856 pts/7    Ss   16:29   0:00 bash -i
+nickl       5192  0.0  0.0   2496   504 pts/7    S+   16:30   0:00 ./a.out
+nickl       5196  0.0  0.1  11496  3184 pts/7    R+   16:30   0:00 /bin/ps u
+/home/nickl$ ls
+t.tokens[0] = ls
+a.out	 Documents  foo.txt  Pictures  Public  techshell.c  typescript
+Desktop  Downloads  Music    ps.out    snap    Templates    Videos
+/home/nickl$ ps u > ps.out
+Right Redirect
+/home/nickl$ wc -l ps  < ps.out
+Left redirect
+t.tokens[0] = wc
+t.tokens[1] = -l
+22
+/home/nickl$ wc -l ps.out > wc.out
+Right Redirect
+/home/nickl$ cat wc.out
+t.tokens[0] = cat
+t.tokens[1] = wc.out
+t.tokens[0] = wc
+t.tokens[1] = -l
+t.tokens[2] = ps.out
+22 ps.out
+/home/nickl$ ls
+t.tokens[0] = ls
+a.out	 Documents  foo.txt  Pictures  Public  techshell.c  typescript	wc.out
+Desktop  Downloads  Music    ps.out    snap    Templates    Videos
+/home/nickl$ rm ps.out wc.out
+t.tokens[0] = rm
+t.tokens[1] = ps.out
+t.tokens[2] = wc.out
+/home/nickl$ ls
+t.tokens[0] = ls
+a.out	 Documents  foo.txt  Pictures  snap	    Templates	Videos
+Desktop  Downloads  Music    Public    techshell.c  typescript
+]0;nickl@nickl-VirtualBox: ~[01;32mnickl@nickl-VirtualBox[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2022-11-13 16:32:26-06:00 [COMMAND_EXIT_CODE="1"]

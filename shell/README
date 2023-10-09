@@ -1,0 +1,29 @@
+Novi Sandlin
+Nick Landry
+
+Inner workings: 
+	??
+	Loop is started to continually take user input.
+	
+	user input is tokenized
+
+	user input is broken into section. namely the infile outfile
+	and command are determined and fds are reassigned accordingly
+	
+	command is executed in child process using execvp	
+	
+	Another command is asked of the user
+	Upon entrance of exit: break loop.
+
+	structs: 
+		command: contains command string and int num_toks
+		path: contains array of tokens, int number of tokens named levels
+
+	Functions:
+		main(): contains main shell loop
+		execute(): forks and executes given command. Formats command based on 
+			   given redirects, command structure, whatever.
+		tokenize(): tokenizes command and returns command struct
+		formatdir(): tokenizes dir, removing slashes, and returns path struct
+			     for use in shell prompt
+
